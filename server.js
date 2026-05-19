@@ -12,5 +12,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(Server ${PORT}-portda muvaffaqiyatli ishga tushdi.);
+    console.log(/Server ${PORT}-portda muvaffaqiyatli ishga tushdi./);
 });
