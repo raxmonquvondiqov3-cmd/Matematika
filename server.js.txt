@@ -1,0 +1,16 @@
+const express = require('express');
+const path = require('path');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Statik fayllarni (html, css, js) ulash uchun
+app.use(express.static(path.join(__dirname)));
+
+// Asosiy sahifaga kirganda index.html ni ko'rsatish
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.listen(PORT, () => {
+    console.log(Server ${PORT}-portda muvaffaqiyatli ishga tushdi.);
+});
